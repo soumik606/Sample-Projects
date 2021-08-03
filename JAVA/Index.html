@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<script>
+	function f(){
+		var a=document.getElementById("passw").value;
+		var b=document.getElementById("cnf_passw").value;
+		if(a==""){
+			document.getElementById("messages").innerHTML="Please Fill Password";
+			return false;
+		}
+		if(a!=b){
+			document.getElementById("messages").innerHTML="Password not matched";
+			return false;
+		}
+	}
+</script>
+<form action="register" method="post" onsubmit="return f()">
+	Enter your Name<input type="text" name="name"><br></br>
+	Enter Email<input type="email" name="email"><br></br>
+	Enter Password<input type="password" name="passwd" id="passw">
+	<span id="messages"></span><br></br>
+	Confirm Password<input type="password" name="cnf_passwd" id="cnf_passw">
+	<span id="messages"></span><br></br>
+	<input type="submit" value="Submit">
+</form>
+<a href="index_2.html"><button>Already Have an Account? Sign in</button></a>
+</body>
+</html>
