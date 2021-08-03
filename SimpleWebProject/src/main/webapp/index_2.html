@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function f(){
+	var a=document.getElementById("passw").value;
+	if(a==""){
+		document.getElementById("messages").innerHTML="Please Fill Password";
+		return false;
+	}
+}
+</script>
+<form action="login" method="post" onsubmit="return f()">
+	Enter Email<input type="email" name="email"><br></br>
+	Enter Password<input type="password" name="passwd" id="passw">
+	<span id="messages"></span><br></br>
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html>
